@@ -3,7 +3,7 @@
 import pygame
 from colors import *
 
-G = 10 # Remains positive because of the inverted coordinate system
+G = 20 # Remains positive because of the inverted coordinate system
 
 class Rock:
     def __init__(self, x, y):
