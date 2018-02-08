@@ -10,8 +10,8 @@ class Target:
         self.target = pygame.Rect((0,0,width,10))
         self.target.center = (self.x, self.y)
 
-    def contact(self, rock):
-        pass
+    def hitBy(self, obj):
+        return self.target.colliderect(obj.getRect())
         
     def draw(self, surf):
         

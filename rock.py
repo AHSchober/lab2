@@ -11,6 +11,7 @@ class Rock:
         self.y = y
         self.vx = 0
         self.vy = 0
+        self.rock = (0,0,0,0)
         
     def move(self, time):
         self.x += self.vx*time # Move in x direction
@@ -29,11 +30,15 @@ class Rock:
         self.y = y
         self.vx = 0
         self.vy = 0
+
+    def getRect(self):
+        return self.rock
     
     def draw(self, surf):
 
-        rock = pygame.Rect((0,0,10,10))
-        rock.center=(self.x,self.y)
-        pygame.draw.rect(surf,(ROCK_COLOR),rock)
+        self.rock = pygame.Rect((0,0,10,10))
+        self.rock.center=(self.x,self.y)
+        pygame.draw.rect(surf,(ROCK_COLOR),self.rock)
+        
         
     
