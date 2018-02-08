@@ -18,6 +18,9 @@ def main():
         launcher = launchR.launcher(0,SCREEN_HEIGHT-20)
         the_rock = rock.Rock(0,SCREEN_HEIGHT-20)
         the_target = target.Target(random.random()*SCREEN_WIDTH + 100, SCREEN_HEIGHT - 20, TARGET_WIDTH)
+
+        objs = [launcher, the_rock, the_target]
+
         while True:
                 
                 #1 Process events
@@ -42,9 +45,8 @@ def main():
                                                                         
                 #3 draw everything
                 draw_world(screen)
-                launcher.draw(screen)
-                the_rock.draw(screen)
-                the_target.draw(screen)
+                for obj in objs:
+                        obj.draw(screen)
 		pygame.display.update()
                 # run at the right speed
                 fpsClock.tick(FPS)
