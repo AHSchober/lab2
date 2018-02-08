@@ -23,6 +23,12 @@ class Rock:
             return False
         else:
             return True
+
+    def moveTo(self, x, y):
+        self.x = x
+        self.y = y
+        self.vx = 0
+        self.vy = 0
     
     def draw(self, surf):
 

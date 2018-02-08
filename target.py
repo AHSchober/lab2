@@ -7,9 +7,8 @@ class Target:
         self.x = x
         self.y = y
         self.width = width
-        target = pygame.Rect((0,0,width,10))
-        self.target = target
-        target.center = (self.x, self.y)
+        self.target = pygame.Rect((0,0,width,10))
+        self.target.center = (self.x, self.y)
 
     def contact(self, rock):
         pass

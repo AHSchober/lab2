@@ -42,7 +42,12 @@ def main():
                                 sys.exit()
                 #2 ... update game logic ...
                 the_rock.move(1.0/FPS)
-                                                                        
+                if(the_rock.y>SCREEN_HEIGHT):
+                        the_rock.moveTo(0, SCREEN_HEIGHT-20)
+                        print('You Missed')
+                if(the_target.hitBy(the_rock)):
+                        the_rock.moveTo(0, SCREEN_HEIGHT-20)
+                        print('w00t')
                 #3 draw everything
                 draw_world(screen)
                 for obj in objs:
