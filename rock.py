@@ -14,9 +14,9 @@ class Rock:
         
     def move(self, time):
         self.x += self.vx*time # Move in x direction
-        if(self.y < 400):
+        if(self.vy !=0):
             self.vy += G*time # Update the y velocity for g
-            self.y += self.vy*time # Move in y direction
+        self.y += self.vy*time # Move in y direction
     
     def isMoving(self):
         if (self.vx == 0) and (self.vy == 0):
