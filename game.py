@@ -47,7 +47,7 @@ def main():
                         displayText('You Missed', screen)
                 if(the_target.hitBy(the_rock)):
                         the_rock.moveTo(0, SCREEN_HEIGHT-20)
-                        displayText('FUCK YOU ADAM', screen)
+                        displayText('Adam Smells', screen)
                 #3 draw everything
                 draw_world(screen)
                 for obj in objs:
